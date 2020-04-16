@@ -19,6 +19,7 @@ REQUIREMENTS = [
     "treelib",
 ]
 TEST_REQUIREMENTS = [
+    "black; python_version >= '3'",
     "pytest",
     "sphinx",
     "sphinx-argparse",
