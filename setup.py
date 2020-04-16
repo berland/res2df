@@ -58,7 +58,6 @@ setup(
             "wcon2csv=ecl2df.wcon:main",
         ]
     },
-
     install_requires=REQUIREMENTS,
     tests_requires=TEST_REQUIREMENTS,
     setup_requires=SETUP_REQUIREMENTS,
