@@ -8,7 +8,8 @@ on:
     branches:
       - master
   release:
-    types: published
+    types: 
+      - published
   schedule:
     # Run CI every night and check that tests are working with latest dependencies
     - cron:  '0 0 * * *'
@@ -35,12 +36,14 @@ jobs:
       - name: Check code style
         if: matrix.python-version != '2.7'
         run: |
+          pwd
           pip install black
           black --check ecl2df/*py tests/test_*py setup.py docs/conf.py
 
       - name: Compile and install opm-common
         run: |
           sudo apt-get install libboost-all-dev liblapack-dev
+          pwd
           pushd ..
           git clone --recursive https://github.com/OPM/opm-common.git
           mkdir opm-common/build
@@ -54,9 +57,11 @@ jobs:
           make -j2 install
           popd
           popd
+          pwd
 
       - name: Install ecl2df with dependencies
         run: |
+          pwd
           pip install --upgrade pip
           pip install .
     
