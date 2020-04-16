@@ -15,13 +15,13 @@ except ImportError:
 SETUP_REQUIREMENTS = ["setuptools>=28", "setuptools_scm"]
 REQUIREMENTS = [
     "libecl",
-    "networkx",
     "pandas",
     "pyyaml>=5.1",
     "treelib",
 ]
 TEST_REQUIREMENTS = [
     "black; python_version >= '3'",
+    "networkx",
     "pytest",
     "sphinx",
     "sphinx-argparse",
