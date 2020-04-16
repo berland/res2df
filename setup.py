@@ -58,6 +58,6 @@ setup(
     },
 
     install_requires=REQUIREMENTS,
-    tests_require=TEST_REQUIREMENTS,
+    tests_requires=TEST_REQUIREMENTS,
     setup_requires=SETUP_REQUIREMENTS,
 )
