@@ -34,7 +34,9 @@ jobs:
 
       - name: Check code style
         if: matrix.python-version != '2.7'
-        run: black --check src/ tests/test_*py setup.py
+        run: |
+          pip install black
+          black --check src/ tests/test_*py setup.py
 
       - name: Compile and install opm-common
         run: |
