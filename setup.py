@@ -26,6 +26,7 @@ TEST_REQUIREMENTS = [
     "sphinx-argparse",
     "sphinx_rtd_theme",
 ]
+EXTRAS_REQUIRE = {"tests": TEST_REQUIREMENTS}
 
 setup(
     name="ecl2df",
@@ -60,6 +61,6 @@ setup(
     },
     test_suite="tests",
     install_requires=REQUIREMENTS,
-    tests_require=TEST_REQUIREMENTS,
     setup_requires=SETUP_REQUIREMENTS,
+    extras_require=EXTRAS_REQUIRE,
 )
