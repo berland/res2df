@@ -12,6 +12,7 @@ except ImportError:
     cmdclass = {}
 
 
+SETUP_REQUIREMENTS = ["setuptools>=28", "setuptools_scm"]
 REQUIREMENTS = [
     "libecl",
     "pandas",
@@ -25,7 +26,6 @@ TEST_REQUIREMENTS = [
     "sphinx-argparse",
     "sphinx_rtd_theme",
 ]
-SETUP_REQUIREMENTS = ["pytest-runner", "setuptools>=28", "setuptools_scm"]
 
 setup(
     name="ecl2df",
@@ -58,7 +58,8 @@ setup(
             "wcon2csv=ecl2df.wcon:main",
         ]
     },
+    test_suite="tests",
     install_requires=REQUIREMENTS,
-    tests_requires=TEST_REQUIREMENTS,
+    tests_require=TEST_REQUIREMENTS,
     setup_requires=SETUP_REQUIREMENTS,
 )

@@ -51,7 +51,7 @@ jobs:
                    -DBUILD_SHARED_LIBS=ON \
                    -DOPM_ENABLE_PYTHON=ON \
                    -DOPM_INSTALL_PYTHON=ON
-          make -j4 install
+          make -j2 install
           popd
           popd
 
