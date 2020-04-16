@@ -33,12 +33,12 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }} 
 
-          #- name: Check code style
-          #if: matrix.python-version != '2.7'
-          #run: |
-          # pwd
-          # pip install black
-          # black --check ecl2df/*py tests/test_*py setup.py docs/conf.py
+      - name: Check code style
+        if: matrix.python-version != '2.7'
+        run: |
+          pwd
+          pip install black
+          black --check ecl2df/*py tests/test_*py setup.py docs/conf.py
 
       - name: Compile and install opm-common
         run: |
