@@ -61,7 +61,7 @@ jobs:
         run: pip freeze
     
       - name: Check code style
-        if: matrix.python-version != "2.7"
+        if: matrix.python-version != '2.7'
         run: black --check src/ tests/test_*py setup.py
     
       - name: Run tests
