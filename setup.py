@@ -25,7 +25,7 @@ TEST_REQUIREMENTS = [
     "sphinx-argparse",
     "sphinx_rtd_theme",
 ]
-SETUP_REQUIREMENTS = ["pytest-runner", "setuptools >=28", "setuptools_scm"]
+SETUP_REQUIREMENTS = ["pytest-runner", "setuptools>=28", "setuptools_scm"]
 
 setup(
     name="ecl2df",
