@@ -3,5 +3,5 @@ install_test_dependencies () {
 }
 
 install_package () {
-  pip install .[tests,docs]
+  pip install .[opm,tests,docs]
 }

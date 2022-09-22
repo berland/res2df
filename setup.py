@@ -18,7 +18,6 @@ SETUP_REQUIREMENTS = ["setuptools>=28", "setuptools_scm < 6.1"]
 REQUIREMENTS = [
     "ecl",
     "numpy",
-    "opm>=2020.10.2",  # NB: Pypi versions.
     "pandas",
     "pyarrow",
     "pyyaml>=5.1",
@@ -37,6 +36,7 @@ DOCS_REQUIREMENTS = [
     "sphinx_rtd_theme",
 ]
 EXTRAS_REQUIRE = {
+    "opm": ["opm>=2020.10.2"],
     "tests": TEST_REQUIREMENTS,
     "docs": DOCS_REQUIREMENTS,
     "ert": ["ert>=2.38.0-b5"],
